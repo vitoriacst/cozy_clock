@@ -1,7 +1,12 @@
 import { Config } from '@stencil/core';
+import tailwind, { tailwindHMR } from 'stencil-tailwind-plugin';
 
 export const config: Config = {
   namespace: 'cozy-clock',
+  plugins: [
+    tailwind(),
+    tailwindHMR(),
+  ],
   outputTargets: [
     {
       type: 'dist',
